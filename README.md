@@ -24,18 +24,18 @@ Este programa permite el calculo de balance final, transaccion de mayor monto y 
       `chmod +x setup.sh`
    - ejecutar el script `./setup.sh`
    - Verificar con el comando de prueba 
-   `.venv\bin\python ptb_cli\main.py report --file data.csv full-report`
+   `.venv\bin\python main.py report --file test/data.csv full-report`
 
 
    > Windows
    - ejecutar el script `./setup.bat`
    -  Verificar con el comando de prueba 
-   `.venv\Scripts\python ptb_cli\main.py report --file data.csv full-report`
+   `.venv\Scripts\python main.py report --file test/data.csv full-report`
 
    ***De requerir la instalacion manual, los comandos de instalacion estan dentro del los archivos setup respectivos**
 
-   ***De usar la consola de git, favor usar el siguiente comando puesto que la consola de git no acepta slash invertido en path**
-   `.venv/Scripts/python ptb_cli/main.py report --file data.csv full-report`
+   ***De usar la consola de git, favor usar el siguiente comando puesto que la consola de git no acepta slash invertido en path (Windows git console)**
+   `.venv/Scripts/python main.py report --file test/data.csv full-report`
 
 
 ## Enfoque y Solucion
