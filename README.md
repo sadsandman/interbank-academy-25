@@ -22,17 +22,21 @@ Este programa permite el calculo de balance final, transaccion de mayor monto y 
    - convertir el script en ejecutable:
    
       `chmod +x setup.sh`
-   - ejecutar el script `setup.sh`
+   - ejecutar el script `./setup.sh`
    - Verificar con el comando de prueba 
-   `.venv\Scripts\python ptb_cli\main.py report --file archivo.csv full-report`
+   `.venv\bin\python ptb_cli\main.py report --file data.csv full-report`
 
 
    > Windows
-   - ejecutar el script `setup.bat`
+   - ejecutar el script `./setup.bat`
    -  Verificar con el comando de prueba 
-   `.venv\Scripts\python ptb_cli\main.py report --file archivo.csv full-report`
+   `.venv\Scripts\python ptb_cli\main.py report --file data.csv full-report`
 
    ***De requerir la instalacion manual, los comandos de instalacion estan dentro del los archivos setup respectivos**
+
+   ***De usar la consola de git, favor usar el siguiente comando puesto que la consola de git no acepta slash invertido en path**
+   `.venv/Scripts/python ptb_cli/main.py report --file data.csv full-report`
+
 
 ## Enfoque y Solucion
 Intente tomar un enfoque que permitiera la escalabilidad, intentando dejar abierta las siguientes posibilidades
@@ -41,7 +45,7 @@ Intente tomar un enfoque que permitiera la escalabilidad, intentando dejar abier
 - Implementacion de nuevos comandos CLI
 - Implementacion de mas tipos de analisis de datos, o nuevas funcionalidades
 
-Tales consideraciones me indicaron a Typer para la generacion de la aplicacion, puesto que su escalabilidad y facilidad de manejo superan a argparse 
+Tales consideraciones me señalaron a Typer para la generacion de la aplicacion, puesto que su escalabilidad y facilidad de manejo superan a argparse 
 
 Como tal, se genero la siguiente linea de funcionamiento, explicado desde su comando de ejecucion:
 
@@ -77,7 +81,7 @@ ptb-cli/
 ├── test/                       # Pruebas automáticas
 │   └── data.csv                # Archivo csv de demo
 │
-├── .venv/                      # Entorno virtual (añadido a .gitignore)
+├── .venv/                      # Entorno virtual
 ├── .gitignore
 ├── README.md
 ├── requirements.txt            # Requisitos

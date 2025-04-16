@@ -23,7 +23,7 @@ def calcularBalanceFinal(globalCsvData: List[Dict[str, str]]):
 
 def calcularTransaccionMontoMayor(globalCsvData: List[Dict[str, str]]):
     """
-    Calcula el valor maximo de transaccion con su id
+    Calcula el valor maximo de transaccion con su id respectivo
     """
 
     return max(globalCsvData
